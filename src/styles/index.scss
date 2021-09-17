@@ -1,6 +1,8 @@
 /*
-    Styles entry point
+    SASS entry point
 */
 
 @import "./base.scss";
+@import "./flex.scss";
+@import "./responsive.scss";
 @import "./Login.scss";

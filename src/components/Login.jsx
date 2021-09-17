@@ -1,3 +1,7 @@
+/*
+    Login primary component
+*/
+
 import React from "react";
 
 export default function Login() {
