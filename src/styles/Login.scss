@@ -172,4 +172,17 @@
 			}
 		}
 	}
+
+	&__footer {
+		width: 100%;
+		padding: 0 0 20px 0;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		.text {
+			text-align: center;
+			font-size: 12px;
+			color: #212121;
+		}
+	}
 }

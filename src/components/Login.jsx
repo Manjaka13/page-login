@@ -67,9 +67,9 @@ export default function Login() {
 	return (
 		<div className="login">
 			{/* Top nav */}
-			<div className="login__nav">
+			<nav className="login__nav">
 				<img className="logo" src={logo} alt="Logo Avenir Green" />
-			</div>
+			</nav>
 
 			{/* Body */}
 			<div className="login__body">
@@ -151,6 +151,10 @@ export default function Login() {
 					</form>
 				</div>
 			</div>
+
+			<footer className="login__footer">
+				<p className="text">By Avenir Green - Tous droits réservés</p>
+			</footer>
 		</div>
 	);
 }
