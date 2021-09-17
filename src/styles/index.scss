@@ -2,6 +2,7 @@
     SASS entry point
 */
 
+@import "./vars.scss";
 @import "./base.scss";
 @import "./flex.scss";
 @import "./responsive.scss";

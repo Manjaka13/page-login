@@ -19,4 +19,3 @@ at this tool wouldn’t be useful if you couldn’t customize it when you are re
 ## A propos de moi
 
 Je suis un [Manjaka](https://facebook.com/Manjaka13), passionné de développement informatique, je crée des applications pour le compte de clients et pour moi même.
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
