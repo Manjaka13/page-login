@@ -2,6 +2,10 @@
     General styles
 */
 
+* {
+	font-family: sans-serif;
+}
+
 html,
 body {
 	width: 100%;
@@ -14,4 +18,19 @@ h1,
 h2 {
 	padding: 0;
 	margin: 0;
+}
+
+p,
+input,
+label {
+	font-size: 13pt;
+}
+
+button,
+input {
+	border: none;
+}
+
+a {
+	text-decoration: none;
 }

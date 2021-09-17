@@ -1,3 +1,136 @@
 /*
     Login styles
 */
+
+.login {
+	width: 100%;
+	height: 100vh;
+	background: white;
+	overflow: auto;
+
+	// Navbar
+	&__nav {
+		width: calc(100% - 40px);
+		padding: 20px 20px 0 20px;
+		.logo {
+			width: 157px;
+			height: 59px;
+		}
+	}
+
+	// Body
+	&__body {
+		@include flexrow(flex-start, center);
+		width: 100%;
+		height: calc(100vh - 83px);
+		box-shadow: 0px 0px 10px red inset;
+	}
+
+	// Illustration
+	&__illustration {
+		@include flexcol(center, center);
+		width: 50%;
+		height: 100%;
+		box-shadow: 0px 0px 4px blue inset;
+		.image {
+			width: calc(100% - 40px);
+		}
+	}
+
+	// Login content
+	&__content {
+		@include flexcol(flex-start);
+		width: calc(50% - 178px);
+		margin: 0 0 0 20px;
+		box-shadow: 0px 0px 4px yellow inset;
+		.title {
+			width: 100%;
+			color: $color-text;
+			font-size: 40pt;
+		}
+		.label {
+			width: 100%;
+			font-size: 13pt;
+			padding: 20px 0 10px 0;
+			color: $color-text;
+			font-weight: bold;
+		}
+		.name {
+			color: $color-primary;
+		}
+		.form {
+			@include flexcol(center);
+			width: 100%;
+		}
+		.inputbox {
+			width: 100%;
+			height: 43px;
+			background: white;
+			margin: 10px 0 10px 0;
+		}
+		.input {
+			width: calc(100% - 40px);
+			height: calc(100% - 10px);
+			border-radius: 5px;
+			box-shadow: 0px 0px 1px black;
+			transition: all 0.2s ease-out;
+			color: rgb(100, 100, 100);
+			padding: 5px 20px 5px 20px;
+			&:hover {
+				box-shadow: 0px 0px 10px rgb(200, 200, 200);
+			}
+			&:active {
+				box-shadow: 0px 0px 3px rgb(109, 83, 83);
+			}
+		}
+		.error {
+			display: none;
+		}
+		.forgot-password {
+			width: 100%;
+			text-align: center;
+			padding: 10px 0 10px 0;
+			color: $color-text;
+			font-weight: bold;
+			font-size: 11pt;
+			transition: all 0.2s ease-out;
+			&:hover {
+				color: $color-primary;
+			}
+			&:active {
+				color: black;
+			}
+		}
+		.button {
+			padding: 10px 20px 10px 20px;
+			background: $color-primary;
+			color: white;
+			transition: all 0.2s ease-out;
+			margin: 40px 0 40px 0;
+			font-weight: bold;
+			border-radius: 5px;
+			&:hover {
+				color: lighten($color-primary, 15%);
+			}
+			&:active {
+				color: darken($color-primary, 15%);
+			}
+		}
+		.issue {
+			color: rgb(150, 150, 150);
+			font-size: 11pt;
+			font-weight: bold;
+		}
+		.contact {
+			color: $color-primary;
+			text-decoration: underline;
+			transition: all 0.2s ease-out;
+			&:hover {
+				color: lighten($color-primary, 15%);
+			}
+			&:active {
+				color: darken($color-primary, 15%);
+			}
+		}
+	}
+}
