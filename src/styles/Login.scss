@@ -148,6 +148,9 @@
 			&:active {
 				background: darken($color-primary, 15%);
 			}
+			&--disabled {
+				pointer-events: none;
+			}
 		}
 		.issue {
 			color: rgb(150, 150, 150);

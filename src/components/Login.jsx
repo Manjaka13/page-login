@@ -6,9 +6,11 @@ import { useState, useRef } from "react";
 import logo from "../images/logo-avenir-green.svg";
 import illustration from "../images/illustration.png";
 import togglePasswordImage from "../images/togglePassword.png";
+import Spinner from "./Spinner.jsx";
 
 export default function Login() {
 	// Store error states
+	const [loading, setLoading] = useState(false);
 	const [errorEmail, setErrorEmail] = useState("");
 	const [errorPassword, setErrorPassword] = useState("");
 
@@ -42,8 +44,11 @@ export default function Login() {
 	// Handles login form submit
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setLoading(true);
 		if (testSubmit()) {
-			alert("Connexion... <>");
+			setTimeout(() => {
+				setLoading(false);
+			}, 2000);
 		}
 	};
 
@@ -125,9 +130,16 @@ export default function Login() {
 						</a>
 
 						{/* Submit button */}
-						<button className="button" type="submit">
-							CONNEXION
-						</button>
+						{loading ? (
+							<Spinner />
+						) : (
+							<button
+								className={loading ? "button button--disabled" : "button"}
+								type="submit"
+							>
+								Connexion
+							</button>
+						)}
 
 						{/* Found an issue */}
 						<p className="issue">
