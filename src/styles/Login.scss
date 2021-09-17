@@ -43,11 +43,12 @@
 		.title {
 			width: 100%;
 			color: $color-text;
-			font-size: 40pt;
+			font-size: 50px;
+			font-family: $font-bold;
 		}
 		.label {
 			width: 100%;
-			font-size: 13pt;
+			font-size: 16px;
 			padding: 20px 0 10px 0;
 			color: $color-text;
 			font-weight: bold;
@@ -124,7 +125,7 @@
 			padding: 20px 0 10px 0;
 			color: $color-text;
 			font-weight: bold;
-			font-size: 11pt;
+			font-size: 12px;
 			transition: all 0.2s ease-out;
 			&:hover {
 				color: $color-primary;
@@ -134,7 +135,9 @@
 			}
 		}
 		.button {
-			padding: 10px 20px 10px 20px;
+			width: 124px;
+			height: 50px;
+			font-size: 14px;
 			background: $color-primary;
 			color: white;
 			transition: all 0.2s ease-out;
@@ -153,8 +156,8 @@
 			}
 		}
 		.issue {
-			color: rgb(150, 150, 150);
-			font-size: 11pt;
+			color: rgba(33, 33, 33, 0.6);
+			font-size: 12px;
 			font-weight: bold;
 		}
 		.contact {

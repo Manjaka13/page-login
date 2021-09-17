@@ -44,8 +44,8 @@ export default function Login() {
 	// Handles login form submit
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setLoading(true);
 		if (testSubmit()) {
+			setLoading(true);
 			setTimeout(() => {
 				setLoading(false);
 			}, 2000);
@@ -137,7 +137,7 @@ export default function Login() {
 								className={loading ? "button button--disabled" : "button"}
 								type="submit"
 							>
-								Connexion
+								CONNEXION
 							</button>
 						)}
 
