@@ -1,6 +1,7 @@
 # Page login Rija
 
 Page de login pour le compte de AvenirGreen Madagascar dans le cadre d'un test de capacités techniques.
+J'utilise React sur le projet, les styles sont compilées avec SASS suivant les normes BEM de nomination de classe.
 
 ## Lancer le projet
 
