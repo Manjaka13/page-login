@@ -12,6 +12,9 @@
 	&__nav {
 		width: calc(100% - 40px);
 		padding: 20px 20px 0 20px;
+		@include screen-md-x {
+			@include flexcol(center);
+		}
 		.logo {
 			width: 157px;
 			height: 59px;
@@ -20,7 +23,7 @@
 
 	// Body
 	&__body {
-		@include flexrow(flex-start, center);
+		@include flexrow(center, center);
 		width: 100%;
 		height: calc(100vh - 83px);
 	}
@@ -28,8 +31,13 @@
 	// Illustration
 	&__illustration {
 		@include flexcol(center, center);
-		width: 50%;
-		height: 100%;
+		width: 30%;
+		@include screen-lg-x {
+			width: 50%;
+		}
+		@include screen-md-x {
+			display: none;
+		}
 		.image {
 			width: calc(100% - 40px);
 		}
@@ -38,13 +46,26 @@
 	// Login content
 	&__content {
 		@include flexcol(flex-start);
-		width: calc(50% - 178px);
+		width: 800px;
 		margin: 0 0 0 20px;
+		@include screen-lg-x {
+			width: calc(50% - 100px);
+		}
+		@include screen-md-x {
+			width: 90%;
+			margin: 0;
+		}
 		.title {
 			width: 100%;
 			color: $color-text;
 			font-size: 50px;
 			font-family: $font-bold;
+			@include screen-md-x {
+				font-size: 30px;
+			}
+			@include screen-sm-x {
+				font-size: 18px;
+			}
 		}
 		.label {
 			width: 100%;
@@ -52,6 +73,9 @@
 			padding: 20px 0 10px 0;
 			color: $color-text;
 			font-weight: bold;
+			@include screen-md-x {
+				padding: 10px 0 5px;
+			}
 		}
 		.name {
 			color: $color-primary;
@@ -92,6 +116,9 @@
 			background: white;
 			margin: 15px 0 15px 0;
 			position: relative;
+			@include screen-md-x {
+				margin: 10px 0 10px 0;
+			}
 			&:hover {
 				.toggle-password {
 					opacity: 1;
@@ -127,6 +154,9 @@
 			font-weight: bold;
 			font-size: 12px;
 			transition: all 0.2s ease-out;
+			@include screen-md-x {
+				padding: 10px 0 5px 0;
+			}
 			&:hover {
 				color: $color-primary;
 			}
@@ -145,6 +175,9 @@
 			font-weight: bold;
 			border-radius: 5px;
 			cursor: pointer;
+			@include screen-md-x {
+				margin: 20px 0 10px;
+			}
 			&:hover {
 				background: lighten($color-primary, 15%);
 			}
