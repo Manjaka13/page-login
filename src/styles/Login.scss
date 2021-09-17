@@ -23,7 +23,6 @@
 		@include flexrow(flex-start, center);
 		width: 100%;
 		height: calc(100vh - 83px);
-		box-shadow: 0px 0px 10px red inset;
 	}
 
 	// Illustration
@@ -31,7 +30,6 @@
 		@include flexcol(center, center);
 		width: 50%;
 		height: 100%;
-		box-shadow: 0px 0px 4px blue inset;
 		.image {
 			width: calc(100% - 40px);
 		}
@@ -42,7 +40,6 @@
 		@include flexcol(flex-start);
 		width: calc(50% - 178px);
 		margin: 0 0 0 20px;
-		box-shadow: 0px 0px 4px yellow inset;
 		.title {
 			width: 100%;
 			color: $color-text;
@@ -62,11 +59,42 @@
 			@include flexcol(center);
 			width: 100%;
 		}
+		.toggle-image {
+			width: 30px;
+			transition: all 0.2s ease-out;
+		}
+		.toggle-password {
+			opacity: 0;
+			position: absolute;
+			top: 7px;
+			right: 10px;
+			transition: all 0.2s ease-out;
+			&:hover {
+				top: 2px;
+				right: 5px;
+				.toggle-image {
+					width: 40px;
+				}
+			}
+			&:active {
+				top: 12px;
+				right: 15px;
+				.toggle-image {
+					width: 20px;
+				}
+			}
+		}
 		.inputbox {
 			width: 100%;
 			height: 43px;
 			background: white;
-			margin: 10px 0 10px 0;
+			margin: 15px 0 15px 0;
+			position: relative;
+			&:hover {
+				.toggle-password {
+					opacity: 1;
+				}
+			}
 		}
 		.input {
 			width: calc(100% - 40px);
@@ -85,6 +113,12 @@
 		}
 		.error {
 			display: none;
+			color: red;
+			font-size: 11pt;
+			padding: 5px 0 0 0;
+			&--active {
+				display: block;
+			}
 		}
 		.forgot-password {
 			width: 100%;
@@ -109,6 +143,7 @@
 			margin: 40px 0 40px 0;
 			font-weight: bold;
 			border-radius: 5px;
+			cursor: pointer;
 			&:hover {
 				color: lighten($color-primary, 15%);
 			}

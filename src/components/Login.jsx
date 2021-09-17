@@ -5,6 +5,7 @@
 import React from "react";
 import logo from "../images/logo-avenir-green.svg";
 import illustration from "../images/illustration.png";
+import togglePassword from "../images/togglePassword.png";
 
 export default function Login() {
 	return (
@@ -33,8 +34,8 @@ export default function Login() {
 					</p>
 					<form className="form">
 						<div className="inputbox">
-							<input className="input" type="text" placeholder="E-MAIL" required />
-							<p className="error"></p>
+							<input className="input" type="email" placeholder="E-MAIL" required />
+							<p className="error error--active">Cet e-mail est invalide.</p>
 						</div>
 						<div className="inputbox">
 							<input
@@ -43,7 +44,14 @@ export default function Login() {
 								placeholder="MOT DE PASSE"
 								required
 							/>
-							<p className="error"></p>
+							<p className="error error--active">Cet mot de passe est invalide.</p>
+							<a className="toggle-password" href="#0">
+								<img
+									className="toggle-image"
+									src={togglePassword}
+									alt="Toggle password"
+								/>
+							</a>
 						</div>
 						<a className="forgot-password" href="#0">
 							Oups, mot de passe oublié ?
